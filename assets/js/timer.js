@@ -14,7 +14,7 @@ const importUserData = function() {
 
 // Starts the timer. This uses a percentage system of whatever the user inputs, to be portrayed on the progress bar as an increasing value over time
 const startTimer = function() {
-    const startTime = userData.userTime / 5;
+    const startTime = userData.userTime / 30;
     let timer = 0;
 
     const progressDown = setInterval(function() {
