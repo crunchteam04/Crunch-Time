@@ -1,0 +1,73 @@
+body{
+    background-image: url("../images/background.PNG");    
+    background-size: 320px;
+}
+.container{
+   border: 10px solid #ff8c24;
+   border-radius: 20px; 
+   margin-top: 60px;
+   
+}
+.start{
+    display: grid;
+    justify-content: center;
+}
+.privacy{
+    display: grid;
+    justify-content: center;
+}
+.privacy a i{
+    display: grid;
+    justify-content: center;
+}
+h6{
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+}
+.avatar{
+    display: grid;
+    justify-content: center;
+}
+.carousel{
+    display: grid;
+    justify-content: center;
+    border: 2px solid black;
+}
+.music{
+    display: grid;
+    justify-content: center;
+}
+.shuffle{
+    display: grid;
+    justify-content: end;
+}
+.left{
+    display: grid;
+    justify-content: end;
+}
+
+.slideContainer{
+    width: 75%;
+    
+}
+
+.slider{
+    width: 100%;
+    height: 20px;
+}
+
+.slider::after{
+    content: '60 ';
+    font-size: 1.2rem;
+    position: absolute;
+    left: 97%;
+    top: 100%;
+}
+.slider::before{
+    content: '0';
+    font-size: 1.2rem;
+    position: absolute;
+    right: 97%;
+    top: 100%;
+}

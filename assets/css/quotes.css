@@ -1,0 +1,15 @@
+#quoteHeader {
+    text-align: center;
+}
+
+.quotebox {
+    border:  solid 2px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+.inspire{
+    text-align: center;
+}
