@@ -3,7 +3,6 @@ var inputEl = document.querySelector(".validate");
 
 console.log(nextEl);
 nextEl.addEventListener("click", function(event){
-    event.preventDefault();
     // Gets input value
     var name = inputEl.value;
     var userData = { userName: `${name}` };

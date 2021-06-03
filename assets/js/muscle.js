@@ -83,7 +83,7 @@ const chooseExercise = function(data) {
         }
     }
     // If chosenWorkout somehow is still empty (e.g., none of the exercises it pulled happen to be of the target muscle group), we do it aaaaall again...
-    if (!Object.entries(chosenWorkout).length) {
+    if (!Object.entries(chosenWorkout).length || chosenWorkout.equipment.length > 0) {
         makeInputData();
         return;
     }

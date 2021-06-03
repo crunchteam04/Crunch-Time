@@ -13,12 +13,11 @@ fetch('https://type.fit/api/quotes')
     getQuote(data)
 var callQuote = setInterval(() => {
     getQuote(data)
-}, 100000);
+}, 10000);
+// Reduced from 100,000 to 10,000 for demo
 
-var timeLeft = JSON.parse(localStorage.getItem("workout-data"))
-// console.log(timeLeft.time)
-timeLeft = parseInt(timeLeft.time*60000)
-console.log(timeLeft)
+var timeLeft = JSON.parse(localStorage.getItem("userData"))
+timeLeft = parseInt(timeLeft.userTime*60000)
 
 
 setTimeout(() => {
