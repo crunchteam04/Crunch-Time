@@ -2,24 +2,28 @@
 
 var userPotato = JSON.parse(localStorage.getItem("userData"));
 var choosenWorkoutEL = document.querySelector("#choosenWorkout");
-var randomExercise = userPotato.chosenWorkout;
+var nextWorkoutEl = document.querySelector("#nextWorkout");
+var userWorkouts = userPotato.chosenWorkouts;
+var currentWorkoutIndex = 0;
+var firstExercise = userWorkouts[currentWorkoutIndex];
 
 var chosenWorkoutImagesEL = document.querySelector("#chosenWorkoutImages");
 
-var exerciseImages = randomExercise.images;
+var exerciseImages = firstExercise.images;
 
-function displayRandomWorkout() {
-  choosenWorkoutEL.textContent = randomExercise.name;
+
+function displayWorkout(workout) {
+  choosenWorkoutEL.textContent = workout.name;
 
   if (exerciseImages.length < 1) {
-    var exerciseCategory = randomExercise.category.name;
+    var exerciseCategory = workout.category.name;
     chosenWorkoutImagesEL.setAttribute(
       "src",
       (img = "./assets/images/workoutImages/" + exerciseCategory+".svg" )
     );
    
   } else {
-    chosenWorkoutImagesEL.setAttribute("src", exerciseImages[0].image);
+    chosenWorkoutImagesEL.setAttribute("src", workout[0].image);
   }
 
   //if exercise images is falls = empty
@@ -27,5 +31,16 @@ function displayRandomWorkout() {
   //otherwise we put a discription or stock image or both
 }
 
+function nextWorkout() {
+  if (currentWorkoutIndex > userWorkouts.length - 2) {
+    currentWorkoutIndex = 0;
+  } else {
+    currentWorkoutIndex++;
+  }
 
-displayRandomWorkout();
+  displayWorkout(userWorkouts[currentWorkoutIndex])
+}
+
+displayWorkout(firstExercise);
+
+nextWorkoutEl.addEventListener("click", nextWorkout);

@@ -15,9 +15,9 @@ var callQuote = setInterval(() => {
     getQuote(data)
 }, 100000);
 
-var timeLeft = JSON.parse(localStorage.getItem("workout-data"))
+var timeLeft = JSON.parse(localStorage.getItem("userData"))
 // console.log(timeLeft.time)
-timeLeft = parseInt(timeLeft.time*60000)
+timeLeft = parseInt(timeLeft.userTime*60000)
 console.log(timeLeft)
 
 

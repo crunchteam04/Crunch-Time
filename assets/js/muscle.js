@@ -10,9 +10,7 @@ const nextPageEl = document.querySelector("#nextPage");
 
 // The API stuff. The key, the input from the user, the language to draw from, etc.
 const apiUrl = "https://wger.de/api/v2/exerciseinfo?";
-
 const english = "language=2"
-
 let userData = {};
 
 // Grabs the user data from local storage, to update it
@@ -21,6 +19,7 @@ const importUserData = function() {
 
     if (data) {
         userData = data;
+        userData.chosenWorkouts = [];
     }
 };
 
@@ -38,8 +37,9 @@ const getExerciseData = function() {
                 response.json()
                     .then(function(data) {
                         // Now we choose which exercise.
- 
-                        chooseExercise(data);
+                        for (let i = 0; i < 7; i++) {
+                            chooseExercise(data);
+                        }
                     });
             }
         });
@@ -84,16 +84,16 @@ const chooseExercise = function(data) {
     }
     // If chosenWorkout somehow is still empty (e.g., none of the exercises it pulled happen to be of the target muscle group), we do it aaaaall again...
     if (!Object.entries(chosenWorkout).length) {
-        makeInputData();
+        getExerciseData();
         return;
     }
     // Finally, we store the information in local storage, to be accessed on the next page. We make sure it's all in one neat package
-    userData.chosenWorkout = chosenWorkout;
+    userData.chosenWorkouts.push(chosenWorkout);
     localStorage.setItem("userData", JSON.stringify(userData));
     
-    window.location.href = "counter.html";
-    // window.location.href = "counter.html";
-
+    if (userData.chosenWorkouts.length >= 6) {
+        window.location.href = "counter.html";
+    }
 };
 
 const makeInputData = function() {
