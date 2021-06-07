@@ -80,6 +80,12 @@ h6{
     align-items: center;
 }
 
+#error {
+    text-align:center;
+    color: red;
+    font-size: 20px;
+}
+ 
 .exer{
     display: grid;
     justify-content: center;

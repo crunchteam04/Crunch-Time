@@ -9,6 +9,7 @@ var loadUserData = function() {
     if (data) {
         userData = data;
     }
+    userData.userTime = 60;
 };
 
 output.innerHTML = slider.value;
