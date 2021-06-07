@@ -24,6 +24,8 @@ h6{
     display: grid;
     justify-content: center;
     font-weight: bold;
+    color: #ff8c24;
+    text-shadow: 1px 2.8px black;
 }
 .avatar{
     display: grid;
@@ -65,9 +67,70 @@ h6{
     top: 100%;
 }
 .slider::before{
-    content: '0';
+    content: '1';
     font-size: 1.2rem;
     position: absolute;
     right: 97%;
     top: 100%;
+}
+
+.potatoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#error {
+    text-align:center;
+    color: red;
+    font-size: 20px;
+}
+ 
+.exer{
+    display: grid;
+    justify-content: center;
+}
+
+.exercise-img{
+    width: 200px;
+    height: 200px;
+}
+
+.quotebox{
+    display: grid;
+    justify-content: center;
+}
+
+.topLeft{
+    width: 20px;
+    height: 20px;
+    padding-top: 10px;
+}
+
+.topRight{
+    display: grid;
+    justify-content: end;
+  
+}
+.topRight1{
+    width: 20px;
+    height: 20px;
+    padding-top: 10px
+}
+
+.bottomLeft{
+    width: 20px;
+    height: 20px;
+    padding-top: 80px;
+}
+
+.bottomRight{
+    display: grid;
+    justify-content: end;
+  
+}
+.bottomRight1{
+    width: 20px;
+    height: 20px;
+    padding-top: 80px
 }

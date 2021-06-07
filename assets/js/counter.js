@@ -9,6 +9,7 @@ var loadUserData = function() {
     if (data) {
         userData = data;
     }
+    userData.userTime = 60;
 };
 
 output.innerHTML = slider.value;
@@ -20,6 +21,8 @@ slider.oninput = function(){
 
 rightArrow.addEventListener("click", function(){
     localStorage.setItem("userData", JSON.stringify(userData));
+
+
 })
 
 

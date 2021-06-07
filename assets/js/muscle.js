@@ -90,7 +90,10 @@ const chooseExercise = function(data) {
     // Finally, we store the information in local storage, to be accessed on the next page. We make sure it's all in one neat package
     userData.chosenWorkout = chosenWorkout;
     localStorage.setItem("userData", JSON.stringify(userData));
+    
     window.location.href = "counter.html";
+    // window.location.href = "counter.html";
+
 };
 
 const makeInputData = function() {
