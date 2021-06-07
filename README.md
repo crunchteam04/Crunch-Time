@@ -35,5 +35,5 @@ As gyms reopen with limited time available to workout, this app will serve to pr
 
 
 
-Main landing page https://crunchteam04.github.io/Crunch-Time/
+Main landing page https://crunchteam04.github.io/Crunch-Time/   
 Repository page https://github.com/crunchteam04/Crunch-Time
